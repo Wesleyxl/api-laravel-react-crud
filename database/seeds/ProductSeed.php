@@ -16,41 +16,49 @@ class ProductSeed extends Seeder
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(40),
             'text' => Str::random(100),
+            'image' => "",
         ]);
 
     }

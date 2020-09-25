@@ -20,7 +20,7 @@ class ProductController extends Controller
     // listado todos os produtos
     public function index() {
 
-        return response(Product::paginate(6));
+        return response(Product::paginate(20));
 
     }
 
@@ -58,7 +58,6 @@ class ProductController extends Controller
         if ( $product->save() ) {
 
             return response()->json(['status' => true]);
-
         }
 
     }
@@ -70,9 +69,9 @@ class ProductController extends Controller
         // validando os dados recebidos
         $validator = Validator::make( $request->all(), [
 
-            'nome' => 'required|string',
-            'descrição' => 'required|string|min:03',
-            'texto' => 'required|string|min:05'
+            'name' => 'required|string',
+            'description' => 'required|string|min:03',
+            'text' => 'required|string|min:05'
 
         ] );
 
@@ -85,9 +84,10 @@ class ProductController extends Controller
 
          // armazenando atualização no banco
         $product = Product::find($id);
-        $product['name'] = $request->get('nome');
-        $product['description'] = $request->get('descrição');
-        $product['text'] = $request->get('texto');
+        $product['name'] = $request->get('name');
+        $product['description'] = $request->get('description');
+        $product['text'] = $request->get('text');
+
 
         // retornando mensagem de sucesso
         if ( $product->save() ) {
